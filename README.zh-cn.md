@@ -1,8 +1,8 @@
 # PureComment
 
-### Change Language: [English](README.md)
+#### Change Language: [English](README.md)
 
-> ### 此项目为国际微博评论框的模仿品, 详细细节请访问博客: [项目博客](http://showzeng.itscoder.com/android/2017/08/11/the-imitation-of-the-international-weibo-comment-box.html)
+> 此项目为国际微博评论框的模仿品, 详细细节请访问博客: [项目博客](http://showzeng.itscoder.com/android/2017/08/11/the-imitation-of-the-international-weibo-comment-box.html)
 
 ------
 
@@ -16,6 +16,7 @@
 
 ## License
 
+```
 MIT License
 
 Copyright (c) 2017 showzeng
@@ -37,3 +38,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```

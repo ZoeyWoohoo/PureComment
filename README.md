@@ -1,8 +1,8 @@
 # PureComment
 
-### 切换语言: [简体中文](README.zh-cn.md)
+#### 切换语言: [简体中文](README.zh-cn.md)
 
-> ### This project is the imitation of International Weibo comment box. For more Detail: [Blog for this project](http://showzeng.itscoder.com/android/2017/08/11/the-imitation-of-the-international-weibo-comment-box.html)
+> This project is the imitation of International Weibo comment box. For more Detail: [Blog for this project](http://showzeng.itscoder.com/android/2017/08/11/the-imitation-of-the-international-weibo-comment-box.html)
 
 ------
 
@@ -16,6 +16,7 @@
 
 ## License
 
+```
 MIT License
 
 Copyright (c) 2017 showzeng
@@ -37,3 +38,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```

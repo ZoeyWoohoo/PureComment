@@ -8,10 +8,10 @@
 
 > 国际微博评论框的效果图：
 
-![International Weibo comment box gif](https://github.com/showzeng/PureComment/Gif/pureComment.gif)
+![International Weibo comment box gif](https://github.com/showzeng/PureComment/blob/master/Gif/pureComment.gif)
 
 > 模仿成果效果图：
 
-![Imitation of International Weibo comment box gif](https://github.com/showzeng/PureComment/Gif/pureCommentImitation.gif)
+![Imitation of International Weibo comment box gif](https://github.com/showzeng/PureComment/blob/master/Gif/pureCommentImitation.gif)
 
 

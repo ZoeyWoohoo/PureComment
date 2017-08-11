@@ -8,8 +8,8 @@ This project is the imitation of International Weibo comment box. For more Detai
 
 > The effect of International Weibo comment box:
 
-![International Weibo comment box gif](https://github.com/showzeng/PureComment/Gif/pureComment.gif)
+![International Weibo comment box gif](https://github.com/showzeng/PureComment/blob/master/Gif/pureComment.gif)
 
 > The effect of imitation:
 
-![Imitation of International Weibo comment box gif](https://github.com/showzeng/PureComment/Gif/pureCommentImitation.gif)
+![Imitation of International Weibo comment box gif](https://github.com/showzeng/PureComment/blob/master/Gif/pureCommentImitation.gif)

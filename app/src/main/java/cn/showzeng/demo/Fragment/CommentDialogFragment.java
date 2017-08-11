@@ -81,6 +81,7 @@ public class CommentDialogFragment extends DialogFragment implements View.OnClic
     private void fillEditText() {
         dataCallback = (DialogFragmentDataCallback) getActivity();
         commentEditText.setText(dataCallback.getCommentText());
+        commentEditText.setSelection(dataCallback.getCommentText().length());
         if (dataCallback.getCommentText().length() > 0) {
             sendButton.setEnabled(true);
             sendButton.setClickable(true);

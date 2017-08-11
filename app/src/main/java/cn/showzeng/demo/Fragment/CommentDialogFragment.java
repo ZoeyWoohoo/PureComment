@@ -73,7 +73,6 @@ public class CommentDialogFragment extends DialogFragment implements View.OnClic
         photoButton.setOnClickListener(this);
         atButton.setOnClickListener(this);
 
-        sendButton.setEnabled(false);
         sendButton.setOnClickListener(this);
 
         return mDialog;
@@ -105,7 +104,7 @@ public class CommentDialogFragment extends DialogFragment implements View.OnClic
                 inputMethodManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                 inputMethodManager.toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
             }
-        }, 100);
+        }, 110);
     }
 
     private TextWatcher mTextWatcher = new TextWatcher() {
@@ -138,13 +137,13 @@ public class CommentDialogFragment extends DialogFragment implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.image_btn_photo:
-                Toast.makeText(getActivity(), "Pick photo Activity", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Pick photo Activity", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.image_btn_at:
-                Toast.makeText(getActivity(), "Pick people you want to at Activity", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Pick people you want to at Activity", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.image_btn_comment_send:
-                Toast.makeText(getActivity(), commentEditText.getText().toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), commentEditText.getText().toString(), Toast.LENGTH_SHORT).show();
                 commentEditText.setText("");
                 dismiss();
                 break;

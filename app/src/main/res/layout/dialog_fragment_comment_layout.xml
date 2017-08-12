@@ -49,6 +49,6 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:src="@drawable/ic_send"
-        android:tint="@color/iconCover"
+        android:tint="@color/colorAccent"
         android:tintMode="multiply"/>
 </RelativeLayout>

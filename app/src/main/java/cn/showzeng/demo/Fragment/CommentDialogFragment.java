@@ -67,7 +67,15 @@ public class CommentDialogFragment extends DialogFragment implements View.OnClic
         sendButton = (ImageView) mDialog.findViewById(R.id.image_btn_comment_send);
 
         fillEditText();
-        setSoftKeyboard();
+//         setSoftKeyboard();
+        commentEditText.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                Log.i("commentEditText","onGlobalLayout");
+                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
+                imm.showSoftInput(commentEditText, 0);
+            }
+        });
 
         commentEditText.addTextChangedListener(mTextWatcher);
         photoButton.setOnClickListener(this);

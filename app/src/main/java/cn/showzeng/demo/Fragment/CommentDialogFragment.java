@@ -10,6 +10,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -17,21 +18,17 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 import cn.showzeng.demo.Interface.DialogFragmentDataCallback;
 import cn.showzeng.demo.R;
 
 /**
  * Created by showzeng on 17-8-11.
  * Email: kingstageshow@gmail.com
- * Github: https://github.com/showzeng
+ * GitHub: https://github.com/showzeng
  */
 
 public class CommentDialogFragment extends DialogFragment implements View.OnClickListener{
 
-    private Dialog mDialog;
     private EditText commentEditText;
     private ImageView photoButton;
     private ImageView atButton;
@@ -50,16 +47,19 @@ public class CommentDialogFragment extends DialogFragment implements View.OnClic
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
-        mDialog = new Dialog(getActivity(), R.style.BottomDialog);
+        Dialog mDialog = new Dialog(getActivity(), R.style.BottomDialog);
         mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         mDialog.setContentView(R.layout.dialog_fragment_comment_layout);
         mDialog.setCanceledOnTouchOutside(true);
 
         Window window = mDialog.getWindow();
-        WindowManager.LayoutParams layoutParams = window.getAttributes();
-        layoutParams.gravity = Gravity.BOTTOM;
-        layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
-        window.setAttributes(layoutParams);
+        WindowManager.LayoutParams layoutParams;
+        if (window != null) {
+            layoutParams = window.getAttributes();
+            layoutParams.gravity = Gravity.BOTTOM;
+            layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
+            window.setAttributes(layoutParams);
+        }
 
         commentEditText = (EditText) mDialog.findViewById(R.id.edit_comment);
         photoButton = (ImageView) mDialog.findViewById(R.id.image_btn_photo);
@@ -67,15 +67,7 @@ public class CommentDialogFragment extends DialogFragment implements View.OnClic
         sendButton = (ImageView) mDialog.findViewById(R.id.image_btn_comment_send);
 
         fillEditText();
-//         setSoftKeyboard();
-        commentEditText.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                Log.i("commentEditText","onGlobalLayout");
-                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
-                imm.showSoftInput(commentEditText, 0);
-            }
-        });
+        setSoftKeyboard();
 
         commentEditText.addTextChangedListener(mTextWatcher);
         photoButton.setOnClickListener(this);
@@ -101,15 +93,18 @@ public class CommentDialogFragment extends DialogFragment implements View.OnClic
         commentEditText.setFocusableInTouchMode(true);
         commentEditText.requestFocus();
 
-        // TODO: 17-8-11 为何这里要延时才能弹出软键盘, 延时时长又如何判断？ 目前是手动调试
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
+        //为 commentEditText 设置监听器，在 DialogFragment 绘制完后立即呼出软键盘，呼出成功后即注销
+        commentEditText.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
-            public void run() {
+            public void onGlobalLayout() {
                 inputMethodManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                inputMethodManager.toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
+                if (inputMethodManager != null) {
+                    if (inputMethodManager.showSoftInput(commentEditText, 0)) {
+                        commentEditText.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                    }
+                }
             }
-        }, 110);
+        });
     }
 
     private TextWatcher mTextWatcher = new TextWatcher() {

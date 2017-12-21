@@ -3,7 +3,7 @@ package cn.showzeng.demo.Interface;
 /**
  * Created by showzeng on 17-8-11.
  * Email: kingstageshow@gmail.com
- * Github: https://github.com/showzeng
+ * GitHub: https://github.com/showzeng
  */
 
 public interface DialogFragmentDataCallback {

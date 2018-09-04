@@ -4,8 +4,6 @@
 
 > This project is the imitation of International Weibo comment box. For more Detail: [Blog for this project](http://showzeng.itscoder.com/android/2017/08/11/the-imitation-of-the-international-weibo-comment-box.html)
 
-------
-
 |International Weibo comment box|Imitation|
 |:--:|:--:|
 |![International Weibo comment box gif](https://github.com/showzeng/PureComment/blob/master/Gif/pureComment.gif)|![Imitation of International Weibo comment box gif](https://github.com/showzeng/PureComment/blob/master/Gif/pureCommentImitation.gif)|

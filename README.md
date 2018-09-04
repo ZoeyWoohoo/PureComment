@@ -6,13 +6,9 @@
 
 ------
 
-### The effect of International Weibo comment box:
-
-![International Weibo comment box gif](https://github.com/showzeng/PureComment/blob/master/Gif/pureComment.gif)
-
-### The effect of imitation:
-
-![Imitation of International Weibo comment box gif](https://github.com/showzeng/PureComment/blob/master/Gif/pureCommentImitation.gif)
+|International Weibo comment box|Imitation|
+|:--:|:--:|
+|![International Weibo comment box gif](https://github.com/showzeng/PureComment/blob/master/Gif/pureComment.gif)|![Imitation of International Weibo comment box gif](https://github.com/showzeng/PureComment/blob/master/Gif/pureCommentImitation.gif)|
 
 ## License
 

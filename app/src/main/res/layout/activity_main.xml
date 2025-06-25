@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_my_material_grey"
@@ -8,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/pureWhite"
         android:elevation="8dp">
@@ -16,19 +15,19 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_margin="10dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/img_avatar"/>
+            android:layout_margin="10dp"
+            android:src="@drawable/img_avatar" />
 
         <TextView
             android:id="@+id/tv_comment_fake_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="添加评论..."
-            android:textColorHint="@color/textHint"
-            android:textColor="@color/primary_text"
+            android:ellipsize="end"
             android:gravity="center_vertical"
+            android:hint="添加评论..."
             android:maxLines="1"
-            android:ellipsize="end"/>
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/textHint" />
     </LinearLayout>
 </RelativeLayout>
